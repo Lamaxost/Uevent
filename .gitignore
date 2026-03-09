@@ -1,2 +1,18 @@
 .env
 .DS_Store
+terraform.tfvars
+
+
+# Local terraform directories
+**/.terraform/*
+
+# .tfstate files (These contain plain-text secrets!)
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Sensitive variables
+*.tfvars
+*.tfvars.json
