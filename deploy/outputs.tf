@@ -8,9 +8,9 @@ output "backend_url" {
   description = "The URL for the backend API"
 }
 
-output "backend_droplet_ids" {
-  value       = digitalocean_droplet.backend_server[*].id
-  description = "The IDs of the backend droplets"
+output "droplet_ips" {
+  value       = digitalocean_droplet.backend_server[*].ipv4_address
+  description = "The IPs of the backend droplets"
 }
 
 output "db_host" {
