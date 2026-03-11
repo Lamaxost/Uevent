@@ -1,0 +1,35 @@
+name: Build and Push to DOCR
+
+on:
+  push:
+    branches: ["main"]
+
+env:
+  REGISTRY_NAME: "uevent-container-registry"
+  IMAGE_NAME: "backend-api"
+  DOCKERFILE_PATH: "services/backend/Dockerfile.production"
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Log in to DigitalOcean Container Registry
+        run: doctl registry login --expiry-seconds 1200
+
+      - name: Build Docker image
+        run: |
+          docker build \
+            -t registry.digitalocean.com/${{ env.REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
+            -f ${{ env.DOCKERFILE_PATH }} .
+
+      - name: Push image to DigitalOcean Container Registry
+        run: |
+          docker push registry.digitalocean.com/${{ env.REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}

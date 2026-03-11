@@ -3,6 +3,7 @@ services:
     image: uevent-backend
     build:
       context: ./services/backend
+      dockerfile: ./services/backend/Dockerfile.development
     ports:
       - "3000:3000"
     volumes:
@@ -18,6 +19,7 @@ services:
     image: uevent-frontend
     build:
       context: ./services/frontend
+      dockerfile: ./services/frontend/Dockerfile.development
     ports:
       - "5371:3000"
     volumes:

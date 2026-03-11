@@ -68,7 +68,7 @@ variable "lb_name" {
 variable "backend_port" {
   description = "The port the backend API runs on"
   type        = number
-  default     = 5000
+  default     = 3000
 }
 
 # -----------------------------------------------------
