@@ -49,9 +49,9 @@ jobs:
           -backend-config="endpoint=https://fra1.digitaloceanspaces.com" \
           -backend-config="region=eu-west-1" \
           -backend-config="key=ueventUevent/terraform.tfstate" \
-          -backend-config="bucket="terraform-memory"\
-          -backend-config="access_key=${{ secrets.AWS_ACCESS_KEY_ID }}" \
-          -backend-config="secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" \
+          -backend-config="bucket=terraform-memory" \
+          -backend-config="access_key=${{ secrets.SPACES_ACCESS_KEY_ID }}" \
+          -backend-config="secret_key=${{ secrets.SPACES_SECRET_ACCESS_KEY }}" \
           -reconfigure
 
       - name: Terraform Extract droplet IPs
