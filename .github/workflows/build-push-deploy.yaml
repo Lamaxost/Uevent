@@ -59,7 +59,7 @@ jobs:
         id: ips
         working-directory: deploy
         run: |
-          echo "ips=$(terraform output -json droplet_ips | jq -r 'join(",")')" >> $GITHUB_OUTPUT
+          echo "ips=$(terraform output -json backend_droplet_ips | jq -r 'join(",")')" >> $GITHUB_OUTPUT
           echo "db_host=$(terraform output -raw db_host)" >> $GITHUB_OUTPUT
           echo "db_name=$(terraform output -raw db_name)" >> $GITHUB_OUTPUT
           echo "db_password=$(terraform output -raw db_password)" >> $GITHUB_OUTPUT
