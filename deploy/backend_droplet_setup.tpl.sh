@@ -27,13 +27,3 @@ DB_USERNAME=${db_username}
 DB_PASSWORD=${db_password}
 DB_NAME=${db_name}
 EOF
-docker run -d \
-  --name backend-api \
-  --restart always \
-  -p 5000:3000 \
-  -e DB_HOST="${db_host}" \
-  -e DB_PORT="${db_port}" \
-  -e DB_USERNAME="${db_username}" \
-  -e DB_PASSWORD="${db_password}" \
-  -e DB_NAME="${db_name}" \
-  ${docker_username}/uevent-backend:latest
