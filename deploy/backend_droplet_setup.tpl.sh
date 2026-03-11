@@ -20,6 +20,13 @@ echo "Database is UP!"
 # 4. Pull and Run Backend
 docker pull ${docker_username}/uevent-backend:latest
 
+cat <<EOF > /root/.uevent.env
+DB_HOST=${db_host}
+DB_PORT=${db_port}
+DB_USERNAME=${db_username}
+DB_PASSWORD=${db_password}
+DB_NAME=${db_name}
+EOF
 docker run -d \
   --name backend-api \
   --restart always \

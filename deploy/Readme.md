@@ -10,7 +10,7 @@ Before deploying this infrastructure, ensure you have the following ready:
 2. **Space / S3 Bucket**: You must have a DigitalOcean Space named `terraform-memory` (or change it in `provider.tf`) located in your desired region to store Terraform's remote state.
 3. **DO Spaces Access Keys**: You must generate an Access Key and a Secret Key for your DigitalOcean Space.
 4. **SSH Key Added**: Ensure your public SSH key is added to your DigitalOcean account under _Settings > Security_. Name it accordingly (the default expects "Fedora", but that can be adjusted).
-5. **Docker Hub Repository**: The backend droplets pull a pre-built backend Docker image. Ensure your backend image (e.g., `your_docker_username/uevent-backend:latest`) exists on Docker Hub.
+5. **DigitalOcean Container Registry**: The backend droplets pull a pre-built backend Docker image. Ensure your backend image exists on your DigitalOcean Container Registry. Ensure your container registry is properly set up in your DigitalOcean account.
 6. **Domain Name**: This infrastructure assumes you manage a domain (e.g., `uvent-campus.xyz`) inside your DigitalOcean account. **IMPORTANT: Your domain MUST be pointed to DigitalOcean's nameservers (`ns1.digitalocean.com`, `ns2.digitalocean.com`, `ns3.digitalocean.com`) for the DNS and SSL certificate provisioning to work.**
 
 ## Customizing the Deployment Defaults
