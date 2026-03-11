@@ -6,25 +6,13 @@ variable "do_token" {
   type        = string
 }
 
-variable "access_key" {
-  description = "Access key for spaces/backend"
-  type        = string
-  sensitive   = true
-}
-
-variable "secret_key" {
-  description = "Secret key for spaces/backend"
-  type        = string
-  sensitive   = true
-}
-
 variable "ssh_fingerprint" {
   description = "The fingerprint of the SSH key"
   type        = string
 }
 
 data "digitalocean_ssh_key" "default" {
-  name = "Fedora"
+  name = "Fedora temp no pass"
 }
 
 # -----------------------------------------------------
