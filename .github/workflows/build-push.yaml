@@ -28,7 +28,7 @@ jobs:
         run: |
           docker build \
             -t registry.digitalocean.com/${{ env.REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
-            -f ${{ env.DOCKERFILE_PATH }} /services/backend
+            -f ${{ env.DOCKERFILE_PATH }} ./services/backend
 
       - name: Push image to DigitalOcean Container Registry
         run: |
