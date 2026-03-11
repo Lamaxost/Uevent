@@ -13,6 +13,8 @@ terraform.tfvars
 # Crash log files
 crash.log
 
+*.tfplan
+
 # Sensitive variables
 *.tfvars
 *.tfvars.json

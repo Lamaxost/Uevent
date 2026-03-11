@@ -4,7 +4,7 @@ services:
     build:
       context: ./services/backend
     ports:
-      - '3000:3000'
+      - "3000:3000"
     volumes:
       - ./services/backend:/app
       - /app/node_modules
@@ -19,7 +19,7 @@ services:
     build:
       context: ./services/frontend
     ports:
-      - '5371:3000'
+      - "5371:3000"
     volumes:
       - ./services/frontend:/app
       - /app/node_modules
@@ -36,7 +36,7 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     ports:
-      - '55432:5432'
+      - "55432:5432"
 
 volumes:
   db_data:

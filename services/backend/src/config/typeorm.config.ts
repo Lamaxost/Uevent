@@ -7,4 +7,8 @@ export default {
 	database: process.env.DB_NAME,
 	autoloadEntities: true,
 	synchronize: true
+
+	ssl: {
+    rejectUnauthorized: false,
+  },
 }

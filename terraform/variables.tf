@@ -14,3 +14,11 @@ variable "project_name" {
   type        = string
   default     = "UEvent"
 }
+
+variable "docker_username" {
+  type = string
+}
+
+data "digitalocean_ssh_key" "default" {
+  name = "Fedora"
+}
