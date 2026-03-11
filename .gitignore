@@ -16,5 +16,5 @@ crash.log
 *.tfplan
 
 # Sensitive variables
-*.tfvars
+terraform.tfvars
 *.tfvars.json

@@ -13,11 +13,10 @@ resource "digitalocean_droplet" "backend_server" {
   tags     = [digitalocean_tag.backend_tag.id]
   ssh_keys = [data.digitalocean_ssh_key.default.id]
   user_data = templatefile("${path.module}/backend_droplet_setup.tpl.sh", {
-    db_host         = digitalocean_database_cluster.postgres.private_host
-    db_port         = digitalocean_database_cluster.postgres.port
-    db_username     = digitalocean_database_cluster.postgres.user
-    db_password     = digitalocean_database_cluster.postgres.password
-    db_name         = digitalocean_database_cluster.postgres.database
-    docker_username = var.docker_username
+    db_host     = digitalocean_database_cluster.postgres.private_host
+    db_port     = digitalocean_database_cluster.postgres.port
+    db_username = digitalocean_database_cluster.postgres.user
+    db_password = digitalocean_database_cluster.postgres.password
+    db_name     = digitalocean_database_cluster.postgres.database
   })
 }
