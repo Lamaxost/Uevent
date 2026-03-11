@@ -6,9 +6,8 @@ export default {
 	password: process.env.DB_PASSWORD,
 	database: process.env.DB_NAME,
 	autoloadEntities: true,
-	synchronize: true
-
+	synchronize: true,
 	ssl: {
-    rejectUnauthorized: false,
-  },
+		rejectUnauthorized: false,
+	},
 }
