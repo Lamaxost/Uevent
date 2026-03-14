@@ -1,0 +1,20 @@
+{
+    "HomePage": {
+        
+    },
+    "Header": {
+        "Music": "Music",
+        "Festivals": "Festivals",
+        "Sport": "Sport",
+        "Clubs": "Clubs",
+        "SpecialEvents": "Special Events",
+        "StandUp": "Stand Up",
+        "ArtTheater": "Art & Theater",
+        "Family": "Family",
+
+        "MyAccount": "My Account",
+
+        "Search": "Search",
+        "SearchPlaceholder": "Artist, Event or Venue"
+    }
+}

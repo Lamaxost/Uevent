@@ -3,9 +3,9 @@ services:
     image: uevent-backend
     build:
       context: ./services/backend
-      dockerfile: ./services/backend/Dockerfile.development
+      dockerfile: Dockerfile.development
     ports:
-      - "3000:3000"
+      - '3000:3000'
     volumes:
       - ./services/backend:/app
       - /app/node_modules
@@ -19,9 +19,9 @@ services:
     image: uevent-frontend
     build:
       context: ./services/frontend
-      dockerfile: ./services/frontend/Dockerfile.development
+      dockerfile: Dockerfile.development
     ports:
-      - "5371:3000"
+      - '5371:3000'
     volumes:
       - ./services/frontend:/app
       - /app/node_modules
@@ -38,7 +38,7 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     ports:
-      - "55432:5432"
+      - '55432:5432'
 
 volumes:
   db_data:

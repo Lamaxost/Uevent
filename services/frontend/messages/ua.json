@@ -1,0 +1,17 @@
+{
+    "HomePage": {
+        
+    },
+    "Header": {
+        "Music": "Музика",
+        "Festivals": "Фестивалі",
+        "Sport": "Спорт",
+        "Clubs": "Клуби",
+        "SpecialEvents": "Спеціальні події",
+        "StandUp": "Стендап",
+        "ArtTheater": "Мистецтво та театр",
+        "Family": "Сім'я",
+
+        "MyAccount": "Мій обліковий запис"
+    }
+}
